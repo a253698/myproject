@@ -46,6 +46,41 @@ public class VariableTester {
 		//變數型  byte short int long 
 		//參照資料型態 s r 
 		
+		
+		float f = 5.0f;
+		int x = 5;
+		int y = 3;
+		int z = (int)(f / y);
+		//作計算計的觀察兩邊的資料型態
+		float w = x / y ;
+		// /=除法 %=餘數		
+		System.out.println(z);
+		System.out.println(w);
+		
+		System.out.println(x == y);
+		System.out.println(x != y);
+		System.out.println(x > y);
+		System.out.println(x < y);
+		System.out.println(x >= y);
+		System.out.println(x <= y);
+		// 有和=一起出現等號在右邊 
+		// ||=或  &&=且
+		
+		System.out.println(x << 2);
+		// X向左推兩個bit
+		
+		System.out.println(x);
+		x = x + 1;
+		// x=x+1  =  x==
+		// x=x-1  =  x--
+		
+		System.out.println(x);
+		
+		x += 2;
+		//x=x+2  =  x += 2 
+		System.out.println(x);
+		
+		
 	}
 
 }
