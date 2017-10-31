@@ -20,21 +20,22 @@ public class VariableTester {
 	
 		String s = new String ("Hello");
 		int len = s.length();
-		//ºâ¥Xs¦³¦h¤Ö¦r(char)
+		//ç®—å‡ºsæœ‰å¤šå°‘å­—(char)
 		System.out.println(s.charAt(0));
-		//java±Æ§Ç 0 1 2 3 ±q0¶}©l¬°²Ä¤@­Ó
+		//javaæ’åº 0 1 2 3 å¾0é–‹å§‹ç‚ºç¬¬ä¸€å€‹
+		//å¯«å‡ºWä¸­çš„ç¬¬ä¸€å€‹å­—æ¯
 		
 		String s2 = "HAHAHAHA";
 		//String s2 = "HAHAHAHA"; = String s2 = new String ("HAHAHAHA");
-		//¦r¦ê=¤@­Ó­Ó­Ó­Ó­Ó¦r¤¸
-		
+		//å­—ä¸²=ä¸€å€‹å€‹å€‹å€‹å€‹å­—å…ƒ
+		//String ç‚ºå­—ä¸²å½¢æ…‹ï¼Œç­‰è™Ÿå³é‚Šå¯ä»¥ä¸åŠ new		
 		
 		System.out.println("len:"+len);
 		
-		//¦r¦ê§ÎºA string 
+		//å­—ä¸² string 
 		System.out.println(s);
 		Random r = new Random();
-		//¶Ã¼Æ random 
+		//äº‚æ•¸ random 
 		 
 		int n1 = r.nextInt(6)+1;
 		
@@ -42,18 +43,18 @@ public class VariableTester {
 		
 		System.out.println(3 == 2);
 		
-		//ÅÜ¼Æ age weight c c2 i pass s r n1
-		//ÅÜ¼Æ«¬  byte short int long 
-		//°Ñ·Ó¸ê®Æ«¬ºA s r 
+		//è®Šæ•¸ age weight c c2 i pass s r n1
+		//è®Šæ•¸å‹  byte short int long 
+		//åƒç…§è³‡æ–™å‹æ…‹ s r 
 		
 		
 		float f = 5.0f;
 		int x = 5;
 		int y = 3;
 		int z = (int)(f / y);
-		//§@­pºâ­pªºÆ[¹î¨âÃäªº¸ê®Æ«¬ºA
+		
 		float w = x / y ;
-		// /=°£ªk %=¾l¼Æ		
+		// /=é™¤æ³• %=é¤˜æ•¸		
 		System.out.println(z);
 		System.out.println(w);
 		
@@ -63,11 +64,11 @@ public class VariableTester {
 		System.out.println(x < y);
 		System.out.println(x >= y);
 		System.out.println(x <= y);
-		// ¦³©M=¤@°_¥X²{µ¥¸¹¦b¥kÃä 
-		// ||=©Î  &&=¥B
+		// å‡è‹¥å‡ºç¾ç­‰è™Ÿ ç­‰è™Ÿä¸€å®šæ”¾åœ¨å³é‚Š
+		// ||=æˆ–  &&=ä¸”
 		
 		System.out.println(x << 2);
-		// X¦V¥ª±À¨â­Óbit
+		// xå‘å³æ¨ä¸€å…©å€‹bit
 		
 		System.out.println(x);
 		x = x + 1;
@@ -80,6 +81,12 @@ public class VariableTester {
 		//x=x+2  =  x += 2 
 		System.out.println(x);
 		
+		String data = "123";
+		int n = Integer.parseInt(data);
+		//å­—ä¸²è½‰æ•¸å­—
+		
+		String mydata = String.valueOf(n);
+		//æ•´å±¬è½‰å­—ä¸²
 		
 	}
 

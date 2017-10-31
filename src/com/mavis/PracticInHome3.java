@@ -8,7 +8,7 @@ public class PracticInHome3 {
 		int i;
 		
 		for (i = 1; i <= 100; i++) {
-		// for = ´`Àô
+		// for = å¾ªç’°
 			
 			sum += i; 
 		}

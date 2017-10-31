@@ -5,13 +5,12 @@ import java.util.Scanner;
 public class NewHello {
 	
 		public static void main(String[] arges){
-			System.out.println("½Ğ¿é¤J§Aªº¦W¦r:");
-			//println ªº ln ¬O«ü¸õ¤@¦æ
+			System.out.println("è«‹è¼¸å…¥ä½ çš„åå­—");
 			Scanner scanner = new Scanner(System.in);
 			String line = scanner.nextLine();
 			System.out.println("Hello,  " +line);
 			
-			System.out.println("¦~¬ö:");
+			System.out.println("ä½ å¹¾æ­²?");
 			line = scanner.nextLine();
 			int age = Integer.parseInt(line);		
 			System.out.println(age);
