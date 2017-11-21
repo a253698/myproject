@@ -4,8 +4,8 @@ public class ScoreTester {
 
 	public static void main(String[] args) {
 		int score = 66;
-		int a = score/10;
-		switch(a){
+		int a = score / 10;
+		switch (a) {
 		case 1:
 		case 2:
 		case 3:
@@ -30,5 +30,4 @@ public class ScoreTester {
 			break;
 		}
 	}
-
 }
