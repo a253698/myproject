@@ -9,11 +9,15 @@ public class Numbers {
 		Scanner scanner = new Scanner(System.in);
 		String line = scanner.nextLine();
 		int n = Integer.parseInt(line);
-		
-		 n = 1;
-		while (n < 10) {
-			System.out.print(n + " ");
-			n = n + 1;
+
+		int i = 1;
+		while (i <= n) {
+			System.out.print(i + " ");
+			i = i + 1;
+			if (i >= 10) {
+				break;
+
+			}
 		}
 	}
 }
