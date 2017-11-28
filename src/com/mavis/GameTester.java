@@ -10,6 +10,7 @@ public class GameTester {
 		while (a != 0) {
 			System.out.print("請輸入方向:");
 			String line = scanner.nextLine();
+			//scan到的轉成string
 			a = Integer.parseInt(line);
 			switch (a) {
 			case 2:

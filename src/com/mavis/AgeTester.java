@@ -9,6 +9,7 @@ public class AgeTester {
 		Scanner scanner = new Scanner(System.in);
 		String line = scanner.nextLine();
 		int age = Integer.parseInt(line);
+		//把 string 轉成 int
 		if (age < 7){
 			System.out.println("讀幼兒園嗎?");
 		}else
