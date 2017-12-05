@@ -11,7 +11,6 @@ public class BobbleSortTeacher {
 					int temp = n[i];
 					n[i] = n[j];
 					n[j] = temp;
-
 				}
 			}
 		}
