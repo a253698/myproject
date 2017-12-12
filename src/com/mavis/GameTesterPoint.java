@@ -13,8 +13,11 @@ public class GameTesterPoint {
 		int column = 5;
 		int pos = 0;
 		
+		System.out.println("2:向上 4:向左 8:向上 6:向右");
+		
 		while (hp > 0) {
-			System.out.println("2:向上 4:向左 8:向上 6:向右");
+			
+			System.out.println("目前位置 : "  + pos  + "  HP : " + hp);
 			System.out.print("請輸入方向:");
 			String line = scanner.nextLine();
 			//scan到的轉成string
@@ -32,10 +35,11 @@ public class GameTesterPoint {
 				break;
 				
 			case 4:
-				if(pos%column == 0){
-					hp = hp - 30;
-				}else{
+				if(pos%column != 0){
+					pos = pos - 1;
 					hp = hp - 5;
+				}else{
+					hp = hp - 30;
 				}
 				System.out.println("向左");
 				System.out.println(hp);
@@ -53,10 +57,11 @@ public class GameTesterPoint {
 				break;
 				
 			case 6:
-				if(pos%column == 4){
-					hp = hp -30;
+				if(pos%column != column -1){
+					pos = pos + 1;
+					hp = hp -5;
 				}else{
-					hp = hp - 5;
+					hp = hp - 30;
 				}
 				System.out.println("向右");
 				System.out.println(hp);
