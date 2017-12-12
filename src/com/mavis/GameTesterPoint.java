@@ -14,7 +14,7 @@ public class GameTesterPoint {
 		int pos = 0;
 		
 		while (hp > 0) {
-			System.out.println("2:向上 4:向左 8:向上 6:向右")
+			System.out.println("2:向上 4:向左 8:向上 6:向右");
 			System.out.print("請輸入方向:");
 			String line = scanner.nextLine();
 			//scan到的轉成string
