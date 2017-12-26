@@ -6,6 +6,8 @@ public class Student {
 	int math;
 	int chinese;
 	String name;
+	static int pass = 60;
+	//static只能抓取static的東西
 
 	public Student(String name, int english, int math, int chinese) {
 		this.name = name;
@@ -20,7 +22,13 @@ public class Student {
 	}
 
 	public void print() {
+		// viod 代表執行過後不回傳
+		System.out.println(pass);
 		System.out.println(english + "\t" + math + "\t" + chinese);
+	}
+	
+	public static void method(){
+		System.out.println("hello!");
 	}
 
 	public int getAverage() {
