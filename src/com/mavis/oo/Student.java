@@ -15,6 +15,10 @@ public class Student {
 		this.math = math;
 		this.chinese = chinese;
 	}
+	
+	public Student(){
+		
+	}
 
 	public Student(String name) {
 		this.name = name;
