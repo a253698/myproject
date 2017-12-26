@@ -7,7 +7,7 @@ public class Student {
 	int chinese;
 	String name;
 	static int pass = 60;
-	//static只能抓取static的東西
+	// static只能抓取static的東西
 
 	public Student(String name, int english, int math, int chinese) {
 		this.name = name;
@@ -15,9 +15,8 @@ public class Student {
 		this.math = math;
 		this.chinese = chinese;
 	}
-	
-	public Student(){
-		
+
+	public Student() {
 	}
 
 	public Student(String name) {
@@ -30,8 +29,8 @@ public class Student {
 		System.out.println(pass);
 		System.out.println(english + "\t" + math + "\t" + chinese);
 	}
-	
-	public static void method(){
+
+	public static void method() {
 		System.out.println("hello!");
 	}
 
