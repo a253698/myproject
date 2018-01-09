@@ -12,9 +12,11 @@ public class Dice2 {
 		// for (int i=0; i<n.length; i++){
 		// System.out.println(n[i]);
 
-		int n[] = { 4, 5, 6, 1, 2, 3 };
+		int n[  ] = { 4, 5, 6, 1, 2, 3 };
 		for (int i : n) {
+			// 陣列 n 的編號為 i
 			System.out.println(n[i]);
+
 		}
 	}
 }
