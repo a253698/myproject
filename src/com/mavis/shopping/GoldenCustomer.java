@@ -7,8 +7,10 @@ public class GoldenCustomer extends Customer {
 		super.discount = 0.01f;
 	}
 
-	public void printForGolden() {
+	@Overwrite
+	public void print() {
 		int feedback = (int) (amount * 0.1);
-		System.out.print("Customer's Feedback :" + feedback);
+		int total = (int) (amount * (1 - discount));
+		System.out.println(amount + "\t " + total + "\t" + "Customer's Feedback :" + feedback);
 	}
 }
