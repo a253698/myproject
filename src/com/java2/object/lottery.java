@@ -16,32 +16,41 @@ public class lottery {
 		int n2 = 0;
 		int temp = 0;
 		int ticketnumbers = 0;
-//		int Middleticketnumbers = 0;
-//		int Hightestticketnumbers = 0;
+		int Middleticketnumbers = 0;
+		int Hightestticketnumbers = 0;
 		
 		if (n <= 1000) {
 			System.out.println("一般抽獎卷");
 			temp = n;
 			ticketnumbers = (n / 250);
+			
+			NormalTicket p1 = new NormalTicket(temp,ticketnumbers);
+			p1.print();
+			
 		} else {
-			if (n <= 5000 || n > 1000) {
+			if (n <= 5000 && n > 1000) {
 				System.out.println("中級抽獎卷");
 				temp = n;
 				n = n1;
 				n1 = temp;
+				Middleticketnumbers = (n1 / 500);
+				
+				MiddleTicket p2 = new MiddleTicket(temp,Middleticketnumbers);
+				p2.print();
+				
 			} else {
 				System.out.println("高級抽獎卷");
-				temp = n1;
-				n1 = n2;
+				temp = n;
+				n = n2;
 				n2 = temp;
+				Hightestticketnumbers= (n2 / 1000);
+				
+				HightestTicket p3 = new HightestTicket(temp,Hightestticketnumbers);
+				p3.print();
+				
 			}
 		}
-		NormalTicket p1 = new NormalTicket(temp,ticketnumbers);
-		p1.print();
-//		MiddleTicket p2 = new MiddleTicket(temp,Middleticketnumbers);
-//		p2.print();
-//		HightestTicket p3 = new HightestTicket(temp,Hightestticketnumbers);
-//		p3.print();
+
 	}
 
 }

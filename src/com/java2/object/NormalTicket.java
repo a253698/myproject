@@ -25,6 +25,7 @@ public class NormalTicket {
 				System.out.print(q1 + "\t");
 			}
 			a = 0;
+			System.exit(0);
 			
 		}
 	}
