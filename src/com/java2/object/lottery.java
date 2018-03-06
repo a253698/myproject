@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class lottery {
 
 	public static void main(String[] args) {
-		
+
 		System.out.println("請輸入一個數字:");
 		Scanner scanner = new Scanner(System.in);
 		String line = scanner.nextLine();
@@ -19,14 +19,16 @@ public class lottery {
 		int Middleticketnumbers = 0;
 		int Hightestticketnumbers = 0;
 		
+//		int count = 0;
+
 		if (n <= 1000) {
 			System.out.println("一般抽獎卷");
 			temp = n;
 			ticketnumbers = (n / 250);
-			
-			NormalTicket p1 = new NormalTicket(temp,ticketnumbers);
+
+			NormalTicket p1 = new NormalTicket(temp, ticketnumbers);
 			p1.print();
-			
+
 		} else {
 			if (n <= 5000 && n > 1000) {
 				System.out.println("中級抽獎卷");
@@ -34,19 +36,21 @@ public class lottery {
 				n = n1;
 				n1 = temp;
 				Middleticketnumbers = (n1 / 500);
-				
-				MiddleTicket p2 = new MiddleTicket(temp,Middleticketnumbers);
+
+				MiddleTicket p2 = new MiddleTicket(temp, Middleticketnumbers);
 				p2.print();
-				
+				p2.allgifted();
+
 			} else {
 				System.out.println("高級抽獎卷");
 				temp = n;
 				n = n2;
 				n2 = temp;
-				Hightestticketnumbers= (n2 / 1000);
-				
-				HightestTicket p3 = new HightestTicket(temp,Hightestticketnumbers);
+				Hightestticketnumbers = (n2 / 1000);
+
+				HightestTicket p3 = new HightestTicket(temp, Hightestticketnumbers);
 				p3.print();
+				p3.allgifted();
 				
 			}
 		}

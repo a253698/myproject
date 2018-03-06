@@ -26,8 +26,6 @@ public class NormalTicket {
 			}
 			a = 0;
 			System.exit(0);
-			
 		}
 	}
-
 }
