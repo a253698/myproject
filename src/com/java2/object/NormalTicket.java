@@ -16,6 +16,7 @@ public class NormalTicket {
 		help = ticketnumbers;
 		ticketnumbers = j;
 	}
+
 	public void print() {
 		int a = -1;
 		while (a != 0) {

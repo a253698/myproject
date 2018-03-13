@@ -7,6 +7,9 @@ import java.util.Scanner;
 public class lottery {
 
 	public static void main(String[] args) {
+		System.out.println("抽獎卷分為三種等級，1~4為一般抽獎卷所得獎，5~7為中級抽獎卷所得獎，7~9為高級抽獎卷所得獎，0號為銘謝惠顧。");
+		System.out.println("中級抽獎卷與高級抽獎眷對顧客將有特別回饋。持有這兩種抽獎卷者不會抽到銘謝惠顧，絕對票票有獎。");
+		
 
 		System.out.println("請輸入一個數字:");
 		Scanner scanner = new Scanner(System.in);

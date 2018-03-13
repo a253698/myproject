@@ -5,9 +5,11 @@ import java.util.Random;
 public class MiddleTicket extends NormalTicket {
 	int Middleticketnumbers = (temp / 500);
 	private int count = 0;
+
 	public MiddleTicket(int temp, int Middleticketnumbers) {
 		super(temp, Middleticketnumbers);
 	}
+
 	@Override
 	public void print() {
 		int b = -1;
@@ -25,13 +27,15 @@ public class MiddleTicket extends NormalTicket {
 		}
 		System.out.println(" ");
 	}
+
 	public void allgifted() {
+		System.out.print("中級抽獎補助禮:");
 		int v = -1;
 		while (v != 0) {
 			for (int k = 1; k <= count; k++) {
 				Random r = new Random();
 				int w1 = r.nextInt((7) + 1);
-				System.out.print(w1 + "\t");
+				System.out.print( w1+ "\t" );
 				if (w1 == 0) {
 					count++;
 				}
