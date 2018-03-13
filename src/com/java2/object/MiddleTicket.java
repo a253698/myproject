@@ -23,11 +23,12 @@ public class MiddleTicket extends NormalTicket {
 			b = 0;
 			// System.exit(0);
 		}
+		System.out.println(" ");
 	}
 	public void allgifted() {
 		int v = -1;
 		while (v != 0) {
-			for (int k = 1; k <= Middleticketnumbers; k++) {
+			for (int k = 1; k <= count; k++) {
 				Random r = new Random();
 				int w1 = r.nextInt((7) + 1);
 				System.out.print(w1 + "\t");
