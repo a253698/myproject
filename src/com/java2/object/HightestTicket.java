@@ -27,6 +27,7 @@ public class HightestTicket extends NormalTicket {
 			c = 0;
 //			System.exit(0);
 		}
+		System.out.println(" ");
 	}
 
 	public void allgifted() {
@@ -36,7 +37,7 @@ public class HightestTicket extends NormalTicket {
 			for (int k = 1; k <= change; k++) {
 
 				Random r = new Random();
-				int w1 = r.nextInt((7) + 1);
+				int w1 = r.nextInt((6) + 4);
 				System.out.print(w1 + "\t" +"高級抽獎補助禮");
 			}
 			b = 0;
