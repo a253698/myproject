@@ -35,7 +35,7 @@ public class MiddleTicket extends NormalTicket {
 			for (int k = 1; k <= count; k++) {
 				Random r = new Random();
 				int w1 = r.nextInt((7) + 1);
-				System.out.print( w1+ "\t" );
+				System.out.print(w1 + "\t");
 				if (w1 == 0) {
 					count++;
 				}

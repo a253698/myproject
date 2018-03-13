@@ -19,13 +19,13 @@ public class HightestTicket extends NormalTicket {
 				Random r = new Random();
 				int e1 = r.nextInt((10) + 1);
 				System.out.print(e1 + "\t");
-				if(e1 == 0) {
+				if (e1 == 0) {
 					change++;
 				}
-				
+
 			}
 			c = 0;
-//			System.exit(0);
+			// System.exit(0);
 		}
 		System.out.println(" ");
 	}
@@ -39,11 +39,9 @@ public class HightestTicket extends NormalTicket {
 
 				Random r = new Random();
 				int w1 = r.nextInt((6) + 4);
-				System.out.print(w1 + "\t" );
+				System.out.print(w1 + "\t");
 			}
 			b = 0;
 		}
-
 	}
-
 }
