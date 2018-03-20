@@ -3,7 +3,7 @@ package com.java2.object;
 public class ABNumber {
 	String number;
 
-	public ABNumber(String Number) {
+	public ABNumber(String number) {
 		this.number = number;
 	}
 
@@ -19,8 +19,8 @@ public class ABNumber {
 					} else {
 						result = result + 1;
 					}
+					break;
 				}
-				break;
 			}
 		}
 		return result;
