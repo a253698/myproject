@@ -17,8 +17,9 @@ public class Poker {
 	}
 
 	public void shuffle() {
+
 		for (int i = 0; i < cards.length; i++) {
-			int r = Random.nextInt(52);
+			int r = random.nextInt(52);
 			int tmp = cards[i];
 			cards[i] = cards[r];
 			cards[r] = tmp;
@@ -26,9 +27,9 @@ public class Poker {
 	}
 
 	public void print() {
-					for (int i=0;i<cards.length;i++) {
-					int a= cards[i];
-				System.out.println((a % 13) + 1 + "" + (flowers.charAt(a / 13)));
-					}
+		for (int i = 0; i < cards.length; i++) {
+			int a = cards[i];
+			System.out.println((a % 13) + 1 + "" + (flowers.charAt(a / 13)));
+		}
 	}
-	}
+}
