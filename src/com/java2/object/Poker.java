@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Poker {
 
-	Random r = new Random();
+	Random random = new Random();
 	String flowers = "♠♥♦♣";
 	int[] cards = new int[52];
 
@@ -17,12 +17,11 @@ public class Poker {
 	}
 
 	public void shuffle() {
-
 		for (int i = 0; i < cards.length; i++) {
-			int r = random.nextInt(52);
+			int j = random.nextInt(52);
 			int tmp = cards[i];
-			cards[i] = cards[r];
-			cards[r] = tmp;
+			cards[i] = cards[j];
+			cards[j] = tmp;
 		}
 	}
 
