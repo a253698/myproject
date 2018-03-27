@@ -8,8 +8,5 @@ public class PokerTester {
 		Poker poker = new Poker();
 		poker.shuffle();
 		poker.print();
-		
-		
 	}
-
 }

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import java.util.Scanner;
 
-public class lottery {
+public class Lottery {
 
 	public static void main(String[] args) {
 		System.out.println("抽獎卷分為三種等級，1~4為一般抽獎卷所得獎，5~7為中級抽獎卷所得獎，7~9為高級抽獎卷所得獎，0號為銘謝惠顧。");

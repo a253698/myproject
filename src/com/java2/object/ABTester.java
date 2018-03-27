@@ -15,5 +15,4 @@ public class ABTester {
 			System.out.println((result / 10) + "A" + (result % 10) + "B");
 		}
 	}
-
 }
