@@ -11,7 +11,7 @@ public class Poker {
 	public Poker() {
 		for (int i = 0; i < cards.length; i++) {
 			cards[i] = i;
-			System.out.println((i % 13) + 1 + "" + (flowers.charAt(i / 13)));
+			// System.out.println((i % 13) + 1 + "" + (flowers.charAt(i / 13)));
 
 		}
 	}
@@ -22,6 +22,7 @@ public class Poker {
 			int tmp = cards[i];
 			cards[i] = cards[j];
 			cards[j] = tmp;
+			// 第一張跟任何一張換，第二張跟任何一張再換。造成打亂。
 		}
 	}
 
@@ -32,3 +33,4 @@ public class Poker {
 		}
 	}
 }
+// 打亂奇數排、打亂偶數排、寫出JQK、加上joker。
