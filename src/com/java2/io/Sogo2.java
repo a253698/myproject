@@ -6,10 +6,10 @@ import java.io.OutputStream;
 import java.io.PrintStream;
 import java.util.Scanner;
 
-public class Sogo {
+public class Sogo2 {
 	Scanner scanner = new Scanner(System.in);
 
-	public Sogo() {
+	public Sogo2() {
 
 	}
 
@@ -20,7 +20,7 @@ public class Sogo {
 
 	public void inputSales() {
 		try {
-			OutputStream fos = new FileOutputStream("SalesData.txt");
+			OutputStream fos = new FileOutputStream("Sogo2SalesData.txt");
 			PrintStream out = new PrintStream(fos);
 			System.out.print("請輸入會員等級:");
 			int level = scanner.nextInt();
