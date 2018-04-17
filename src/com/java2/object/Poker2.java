@@ -6,15 +6,16 @@ import java.util.Random;
 
 public class Poker2 {
 
-	static Random random = new Random();
+	Random random = new Random();
 	String flowers = "♠♥♦♣";
+	
 	List<Integer> cards = new ArrayList<>();
 
 	public Poker2() {
 		for (int i = 1; i < 54; i++) {
 			cards.add(i);
 		}
-		
+	}
 		public void pokershuffle2() {
 			for (int i = 0; i < 54; i++) {
 				int j = random.nextInt(52);
@@ -30,4 +31,3 @@ public class Poker2 {
 		}
 	}
 
-}
