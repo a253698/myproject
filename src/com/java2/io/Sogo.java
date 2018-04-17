@@ -1,6 +1,5 @@
 package com.java2.io;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
@@ -28,6 +27,7 @@ public class Sogo {
 			int level = scanner.nextInt();
 			System.out.print("請輸入消費金額:");
 			int price = scanner.nextInt();
+			out.print(level + "\t" + price);
 			out.flush();
 			out.close();
 		} catch (FileNotFoundException e) {
