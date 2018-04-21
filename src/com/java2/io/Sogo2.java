@@ -24,7 +24,7 @@ public class Sogo2 {
 	}
 
 	public static void main(String[] args) {
-		Sogo sogo = new Sogo();
+		Sogo2 sogo = new Sogo2();
 		sogo.start();
 	}
 
@@ -109,7 +109,7 @@ public class Sogo2 {
 
 	public void inputSales() {
 		try {
-			FileOutputStream fos = new FileOutputStream("sales.txt", true);
+			FileOutputStream fos = new FileOutputStream("Sales2.txt", true);
 			PrintStream out = new PrintStream(fos);
 			System.out.print("請輸入會員等級:");
 			int type = scanner.nextInt();
