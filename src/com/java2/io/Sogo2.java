@@ -9,7 +9,6 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 import java.nio.channels.ShutdownChannelGroupException;
@@ -54,13 +53,13 @@ public class Sogo2 {
 			function = scanner.nextInt();
 			switch (function) {
 			case 1:
-				inputSales();
+				inputSales2();
 				break;
 
 			case 2:
 				ArrayList<Sales> list = new ArrayList<>();
 				try {
-					FileInputStream fis = new FileInputStream("Sales2.txt");
+					FileInputStream fis = new FileInputStream("Sogo2SalesData.txt");
 					InputStreamReader isr = new InputStreamReader(fis);
 					// FileInputStream 和 BufferedReader 的連接橋梁
 					BufferedReader in = new BufferedReader(isr);
@@ -110,23 +109,6 @@ public class Sogo2 {
 		}
 	}
 
-	public void inputSales() {
-		try {
-			FileOutputStream fos = new FileOutputStream("Sales2.txt", true);
-			PrintStream out = new PrintStream(fos);
-			System.out.print("請輸入會員等級:");
-			int type = scanner.nextInt();
-			System.out.print("請輸入銷售金額:");
-			int amount = scanner.nextInt();
-			out.println(type + "\t" + amount);
-			out.flush();
-			out.close();
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-	}
 
 	public void showFunctions() {
 		System.out.println("請輸入功能1~3");
