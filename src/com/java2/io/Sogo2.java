@@ -60,48 +60,48 @@ public class Sogo2 {
 			case 2:
 				ArrayList<Sales> list = new ArrayList<>();
 				try {
-				FileInputStream fis = new FileInputStream("Sales2.txt");
-				InputStreamReader isr = new InputStreamReader(fis);
-				// FileInputStream 和 BufferedReader 的連接橋梁
-				BufferedReader in = new BufferedReader(isr);
-				String line = in.readLine();
-				while (line != null) {
-					String[] token = line.split("\t");
-					try {
-						int type = Integer.parseInt(token[0]);
-						int amount = Integer.parseInt(token[1]);
-						Sales sales = new Sales(type, amount);
-						list.add(sales);
-					} catch (NumberFormatException e) {
-						System.out.println("資料的格式錯誤");
-						return;
+					FileInputStream fis = new FileInputStream("Sales2.txt");
+					InputStreamReader isr = new InputStreamReader(fis);
+					// FileInputStream 和 BufferedReader 的連接橋梁
+					BufferedReader in = new BufferedReader(isr);
+					String line = in.readLine();
+					while (line != null) {
+						String[] token = line.split("\t");
+						try {
+							int type = Integer.parseInt(token[0]);
+							int amount = Integer.parseInt(token[1]);
+							Sales sales = new Sales(type, amount);
+							list.add(sales);
+						} catch (NumberFormatException e) {
+							System.out.println("資料的格式錯誤");
+							return;
+						}
+						line = in.readLine();
 					}
-					line = in.readLine();
+				} catch (FileNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
 				}
-			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			// report
-			for (Sales sales: list){
-				Customer customer = null;
-				switch(sales.type){
-				case 1: 
-					customer = new Customer(sales.getAmount());
-					break;
-				case 2:
-					customer = new SilverCustomer(sales.getAmount());
-					break;
-				case 3:
-					customer = new GoldenCustomer(sales.getAmount());
-					break;
+				// report
+				for (Sales sales : list) {
+					Customer customer = null;
+					switch (sales.getType()) {
+					case 1:
+						customer = new Customer(sales.getAmount());
+						break;
+					case 2:
+						customer = new SilverCustomer(sales.getAmount());
+						break;
+					case 3:
+						customer = new GoldenCustomer(sales.getAmount());
+						break;
+					}
+					customer.print();
 				}
-				customer.print();
-			}
-				
+
 				break;
 
 			case 3:
