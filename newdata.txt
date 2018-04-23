@@ -1,3 +1,0 @@
-Mavis	Customer	1000
-Tom	SilverCustomer	5000
-Wesly	GoldnCustomer	10000

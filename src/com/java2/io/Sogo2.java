@@ -12,6 +12,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import java.nio.channels.ShutdownChannelGroupException;
+
+import com.java2.io.Sales;
 import com.mavis.shopping.Customer;
 import com.mavis.shopping.GoldenCustomer;
 import com.mavis.shopping.SilverCustomer;
@@ -55,7 +58,7 @@ public class Sogo2 {
 				break;
 
 			case 2:
-				List<Sales> list = new ArrayList<>();
+				ArrayList<Sales> list = new ArrayList<>();
 				try {
 				FileInputStream fis = new FileInputStream("Sales2.txt");
 				InputStreamReader isr = new InputStreamReader(fis);
