@@ -6,11 +6,17 @@ import java.util.Scanner;
 
 public class Array04 {
 	public static void main(String[] args) {
+		System.out.println("Sample Input:");
 		Scanner scanner = new Scanner(System.in);
-		List<String> numList = new ArrayList(scanner.nextInt());
-		Integer[] Array = numList.toArray(new Integer[0]);
-		
-		System.out.println(numList);
+		String line = scanner.nextLine();
+		int n = Integer.parseInt(line);
+
+		String[] token = line.split(" ");
+
+
+		if (n % 2 == 1) {
+			System.out.println(n);
+		} 
 	}
 
 }

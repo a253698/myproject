@@ -3,7 +3,6 @@ package stepik;
 import java.util.ArrayList;
 import java.util.List;
 
-import stepik.objArray.GreekLetter;
 
 public class Array03 {
 
