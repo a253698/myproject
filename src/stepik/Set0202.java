@@ -9,9 +9,8 @@ public class Set0202 {
 
 	public static void main(String[] args) {
 		TreeSet<String> set = new TreeSet<>(Arrays.asList("6", "postgres", "sqlite","oracle","mongodb","postgres", "mssql"));
-		 List<String> list = new ArrayList<String>(set);
-		
-		for (String name : list) {
+		set.remove("6");
+		for (String name : set) {
 						System.out.println(name);
 					}
 	}
