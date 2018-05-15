@@ -17,6 +17,5 @@ public class Set02 {
 		 for(int n=0;n<=list.size();n++){
 			 System.out.println(list.get(n));
 		 }
-		 
 		  }
 }
