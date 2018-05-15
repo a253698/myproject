@@ -1,12 +1,12 @@
 package com.java2.threading;
 
-public class Horse extends Thread{
-	 
-	public void run(){
-		
-		for(int i=0; i<=10; i++){
+public class Horse extends Thread {
 
-			System.out.println(getName() + ":" +i);
+	public void run() {
+
+		for (int i = 0; i <= 10; i++) {
+
+			System.out.println(getName() + ":" + i);
 			try {
 				sleep(50);
 			} catch (InterruptedException e) {
@@ -15,6 +15,4 @@ public class Horse extends Thread{
 			}
 		}
 	}
-	
-
 }
