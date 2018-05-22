@@ -1,6 +1,7 @@
 package com.java2.threading;
 
 public class HorseRunable implements Runnable {
+	//可執行負責工作，又可持續執行接下來的工作。開一條新道(多執行緒)。
 
 	@Override
 	public void run() {

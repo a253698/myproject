@@ -2,19 +2,19 @@ package stepik;
 
 public class Employee {
 
-	class Employee {
+	class Employee2 {
 		String name;
 		String email;
 		String experiece;
 	}
 
-	class Developer extends Employee {
+	class Developer extends Employee2 {
 		String mainLanguage;
 		String Skills;
 
 	}
 
-	class DataAnalyst extends Employee {
+	class DataAnalyst extends Employee2 {
 
 	
 	}
