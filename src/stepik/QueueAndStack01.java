@@ -3,8 +3,8 @@ package stepik;
 import java.util.ArrayDeque;
 import java.util.Queue;
 
-public class List01 {
-
+public class QueueAndStack01 {
+	
 	public static void main(String[] args) {
 
 		// write your code here
@@ -18,3 +18,5 @@ public class List01 {
 
 	}
 }
+
+
