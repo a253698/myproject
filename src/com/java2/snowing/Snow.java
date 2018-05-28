@@ -10,7 +10,7 @@ public class Snow extends Thread {
 	int y = 800;
 	private Canvas canvas;
 
-	public Snow() {
+	public Snow(Canvas canvas) {
 		this.canvas = canvas;
 		x = random.nextInt(600);
 		y = random.nextInt(1000);
