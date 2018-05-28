@@ -13,7 +13,7 @@ public class SnowTester {
 		List<Snow> snows = new ArrayList<>();
 		for (int n = 0; n < 150; n++) {
 			Canvas canvas = null;
-			Snow snow = new Snow();
+			Snow snow = new Snow(canvas);
 			snow.start();
 			snows.add(snow);
 		}

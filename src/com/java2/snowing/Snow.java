@@ -12,8 +12,8 @@ public class Snow extends Thread {
 
 	public Snow(Canvas canvas) {
 		this.canvas = canvas;
-		x = random.nextInt(600);
-		y = random.nextInt(1000);
+		x = random.nextInt(800);
+		y = random.nextInt(600);
 	}
 
 	// private static char[] repeat(String string, int i) {
@@ -27,14 +27,14 @@ public class Snow extends Thread {
 
 	@Override
 	public void run() {
-		for (int i = 800; i > 0; i++) {
+		for (int i = 0; i < 800; i++) {
 //			System.out.println(getName() + ":(" + x + "," + y + ")");
 //			y = y - 1;
 			y = y + 1;
 			int movement = random.nextInt(3) - 1;
 			x = x - movement;
 			
-//			canvas.repaint();
+			canvas.repaint();
 			
 			try {
 				sleep(50);
