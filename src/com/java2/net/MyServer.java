@@ -1,5 +1,6 @@
 package com.java2.net;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -15,6 +16,7 @@ public class MyServer {
 			System.out.println("connected");
 			InputStream is = socket.getInputStream(is);
 			InputStreamReader isr = new InputStreamReader(isr);
+			BufferedReader in = new BufferedReader(isr);
 			String line = in.readLine();
 			System.out.println(line);
 			String tokens[] = line.split(":");
