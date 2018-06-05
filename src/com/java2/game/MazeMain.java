@@ -24,11 +24,9 @@ public class MazeMain {
 			line = in.readLine();
 			int trapCount = Integer.parseInt(tokens[0]);
 			/**/
-			int move = Integer.parseInt(tokens[0]);
-			for(int i = 0; i < move; i++){
-				int move = 
-			}
-				
+			int moves = Integer.parseInt(tokens[0]);
+			for(int i = 0; i < moves; i++){
+//				int move = 
 			}
 			/**/
 			Maze m = new Maze(column, row, trapCount);
