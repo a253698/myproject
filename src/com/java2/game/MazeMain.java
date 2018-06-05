@@ -5,6 +5,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+import com.java2.oo.Drink;
+
 public class MazeMain {
 	
 	FileReader fr;
@@ -21,6 +23,14 @@ public class MazeMain {
 			int row =  Integer.parseInt(tokens[1]);
 			line = in.readLine();
 			int trapCount = Integer.parseInt(tokens[0]);
+			/**/
+			int move = Integer.parseInt(tokens[0]);
+			for(int i = 0; i < move; i++){
+				int move = 
+			}
+				
+			}
+			/**/
 			Maze m = new Maze(column, row, trapCount);
 			
 			
