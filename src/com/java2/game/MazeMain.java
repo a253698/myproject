@@ -1,9 +1,36 @@
 package com.java2.game;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
 public class MazeMain {
+	
+	FileReader fr;
 	
 	public MazeMain(){
 		
+		try {
+			
+			fr = new FileReader("Maze.txt");
+			BufferedReader in = new BufferedReader(fr);
+			String line = in.readLine();
+			String tokens[] = line.split(",");
+			int column = Integer.parseInt(tokens[0]);
+			int row =  Integer.parseInt(tokens[1]);
+			line = in.readLine();
+			int trapCount = Integer.parseInt(tokens[0]);
+			Maze m = new Maze(column, row, trapCount);
+			
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	public static void main(String[] args) {
