@@ -11,6 +11,8 @@ import com.java2.oo.Drink;
 public class MazeMain {
 	
 	FileReader fr;
+	int hp = 100;
+	int pos = 0;
 	
 	public MazeMain(){
 		
@@ -32,23 +34,54 @@ public class MazeMain {
 			Maze m = new Maze(column, row, trapCount);
 			Scanner scanner = new Scanner(System.in);
 			int a = -1;
-			while (a != 0) {
+			while (hp > 0) {
 				System.out.print("請輸入方向:");
-				String line = scanner.nextLine();
+				String lineline = scanner.nextLine();
 				//scan到的轉成string
-				a = Integer.parseInt(line);
+				a = Integer.parseInt(lineline);
 				switch (a) {
 				case 2:
+					if(pos/column < row-1 ){
+						pos = pos + column;
+						hp = hp - 5;
+					}else{
+						hp = hp - 30;
+					}
 					System.out.println("向下");
+					System.out.println(hp);
 					break;
+					
 				case 4:
+					if(pos%column != 0){
+						pos = pos - 1;
+						hp = hp - 5;
+					}else{
+						hp = hp - 30;
+					}
 					System.out.println("向左");
+					System.out.println(hp);
 					break;
+					
 				case 8:
+					if(pos/column == 0){
+						pos = pos - column;
+						hp = hp - 5;
+					}else{
+						hp = hp - 30;
+					}
 					System.out.println("向上");
+					System.out.println(hp);
 					break;
+					
 				case 6:
-					System.out.println("向下");
+					if(pos%column != column -1){
+						pos = pos + 1;
+						hp = hp -5;
+					}else{
+						hp = hp - 30;
+					}
+					System.out.println("向右");
+					System.out.println(hp);
 					break;
 				case 0:
 					System.out.println("遊戲結束!");
