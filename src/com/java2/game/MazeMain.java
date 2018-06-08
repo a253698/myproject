@@ -11,8 +11,8 @@ import com.java2.oo.Drink;
 public class MazeMain {
 	
 	FileReader fr;
-	int hp = 100;
-	int pos = 0;
+//	int hp = 100;
+//	int pos = 0;
 	
 	public MazeMain(){
 		
@@ -34,54 +34,58 @@ public class MazeMain {
 			Maze m = new Maze(column, row, trapCount);
 			Scanner scanner = new Scanner(System.in);
 			int a = -1;
-			while (hp > 0) {
+			while (m.player.hp > 0) {
 				System.out.print("請輸入方向:");
 				String lineline = scanner.nextLine();
 				//scan到的轉成string
 				a = Integer.parseInt(lineline);
 				switch (a) {
 				case 2:
-					if(pos/column < row-1 ){
-						pos = pos + column;
-						hp = hp - 5;
+					if(m.player.postition/column < row-1 ){
+						m.player.postition = m.player.postition + column;
+						m.player.hp = m.player.hp - 1;
 					}else{
-						hp = hp - 30;
+						m.player.hp = m.player.hp - 5;
+						System.out.println("HIT!!");
 					}
 					System.out.println("向下");
-					System.out.println(hp);
+					System.out.println(m.player.hp);
 					break;
 					
 				case 4:
-					if(pos%column != 0){
-						pos = pos - 1;
-						hp = hp - 5;
+					if(m.player.postition%column != 0){
+						m.player.postition = m.player.postition - 1;
+						m.player.hp = m.player.hp - 1;
 					}else{
-						hp = hp - 30;
+						m.player.hp = m.player.hp - 5;
+						System.out.println("HIT!!");
 					}
 					System.out.println("向左");
-					System.out.println(hp);
+					System.out.println(m.player.hp);
 					break;
 					
 				case 8:
-					if(pos/column == 0){
-						pos = pos - column;
-						hp = hp - 5;
+					if(m.player.postition/column == 0){
+						m.player.postition = m.player.postition - column;
+						m.player.hp = m.player.hp - 1;
 					}else{
-						hp = hp - 30;
+						m.player.hp = m.player.hp - 5;
+						System.out.println("HIT!!");
 					}
 					System.out.println("向上");
-					System.out.println(hp);
+					System.out.println(m.player.hp);
 					break;
 					
 				case 6:
-					if(pos%column != column -1){
-						pos = pos + 1;
-						hp = hp -5;
+					if(m.player.postition%column != column -1){
+						m.player.postition = m.player.postition + 1;
+						m.player.hp = m.player.hp -1;
 					}else{
-						hp = hp - 30;
+						m.player.hp = m.player.hp - 5;
+						System.out.println("HIT!!");
 					}
 					System.out.println("向右");
-					System.out.println(hp);
+					System.out.println(m.player.hp);
 					break;
 				case 0:
 					System.out.println("遊戲結束!");
