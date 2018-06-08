@@ -10,6 +10,10 @@ import java.net.Socket;
 public class MyServer {
 
 	public static void main(String[] args) {
+		
+		//控制台、所有控制項目、程式和功能、開啟或關閉window功能、telnet
+		//先執行、CMD
+		
 		try {
 			ServerSocket server = new ServerSocket(9956);
 			Socket socket = server.accept();
