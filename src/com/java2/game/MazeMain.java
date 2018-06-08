@@ -56,6 +56,46 @@ public class MazeMain {
 			this.row = row;
 			this.trapCount = trapCount;
 		}
+
+		public int getRow() {
+			return row;
+		}
+
+		public void setRow(int row) {
+			this.row = row;
+		}
+
+		public int getColumn() {
+			return column;
+		}
+
+		public void setColumn(int column) {
+			this.column = column;
+		}
+
+		public int getTrapCount() {
+			return trapCount;
+		}
+
+		public void setTrapCount(int trapCount) {
+			this.trapCount = trapCount;
+		}
+
+		public int[] getTraps() {
+			return traps;
+		}
+
+		public void setTraps(int[] traps) {
+			this.traps = traps;
+		}
+
+		public Player getPlayer() {
+			return player;
+		}
+
+		public void setPlayer(Player player) {
+			this.player = player;
+		}
 	}
 	
 	class Player{
