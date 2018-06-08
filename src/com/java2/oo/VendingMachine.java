@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class VendingMachine {
 
+	
 	int total = 0;
 	List<Drink> drinks = new ArrayList<>();
 	
@@ -18,8 +19,61 @@ public class VendingMachine {
 		Scanner scanner = new Scanner(System.in);
 		int data = -1;
 		while(data != 0){
-			data = scanner.nextInt();
-			switch(data){
+			
+			System.out.println("請投幣或選擇飲料(a或b或c),或輸入0結束:");
+			System.out.println("販賣機餘額 : "  + total );
+			String line = scanner.nextLine();
+			
+			switch(line){
+			
+			case "5":
+				System.out.println("投入五元");
+				total = total + 5;
+				break;
+				
+			case "10":
+				System.out.println("投入十元");
+				total = total + 10;
+				break;
+				
+			case "15":
+				System.out.println("投入十五元");
+				total = total + 15;
+				break;
+				
+			case "a":
+				System.out.println("選擇飲料A");
+				if((total - A)>0){
+					System.out.println("DON!");
+					System.out.println("販賣機餘額:" + (total - A));
+					total = total - A ;
+				}else{
+					System.out.println("BEEP! 餘額不足!");
+				}
+				break;
+				
+			case "b":
+				System.out.println("選擇飲料B");
+				if((total - B)>0){
+					System.out.println("DON!");
+					System.out.println("販賣機餘額:" + (total - B));
+					total = total - B ;
+				}else{
+					System.out.println("BEEP! 餘額不足!");
+				}
+				break;	
+				
+			case "c":
+				System.out.println("選擇飲料C");
+				if((total - C)>0){
+					System.out.println("DON!");
+					System.out.println("販賣機餘額:" + (money - C));
+					total = total - C ;
+				}else{
+					System.out.println("BEEP! 餘額不足!");
+				}
+				break;
+				
 			case 0:
 				System.out.println("End");
 				break;
