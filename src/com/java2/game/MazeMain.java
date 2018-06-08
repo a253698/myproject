@@ -5,9 +5,11 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.Set;
 
 import com.java2.oo.Drink;
 
@@ -29,22 +31,31 @@ public class MazeMain {
 			int row = Integer.parseInt(tokens[1]);
 			line = in.readLine();
 			int trapCount = Integer.parseInt(tokens[0]);
+			Maze m = new Maze(column, row, trapCount);
+			
 			Random random = new Random();
-			
-			List<Integer> trap = new ArrayList<>();
-			for(int a = 1; a < trapCount ; a++  ) {
+			Set<Integer> set = new HashSet<>();
+			for(int a = 1; a < trapCount; a++) {
 				int b = random.nextInt((row*column) + 1);
-				trap.add(b);
+				set.add(b);
 			}
+			m.traps = new int[set.size()];
 			
-			System.out.println(trap);
+//			List<Integer> trap = new ArrayList<>();
+//			for(int a = 1; a < trapCount ; a++  ) {
+//				int b = random.nextInt((row*column) + 1);
+//				trap.add(b);
+//			}
+//			m.traps = new int[trap.size()];
+//			不可用List，會重複
+			
 			
 			/**/
 			// int moves = Integer.parseInt(tokens[0]);
 			// for(int i = 0; i < moves; i++){
 			// }
 			/**/
-			Maze m = new Maze(column, row, trapCount);
+			
 			Scanner scanner = new Scanner(System.in);
 			int a = -1;
 			while (m.player.hp > 0) {
