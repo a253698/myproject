@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Scanner;
 
 import com.java2.oo.Drink;
 
@@ -24,12 +25,36 @@ public class MazeMain {
 			line = in.readLine();
 			int trapCount = Integer.parseInt(tokens[0]);
 			/**/
-			int moves = Integer.parseInt(tokens[0]);
-			for(int i = 0; i < moves; i++){
-//				int move = 
-			}
+//			int moves = Integer.parseInt(tokens[0]);
+//			for(int i = 0; i < moves; i++){
+//			}
 			/**/
 			Maze m = new Maze(column, row, trapCount);
+			Scanner scanner = new Scanner(System.in);
+			int a = -1;
+			while (a != 0) {
+				System.out.print("請輸入方向:");
+				String line = scanner.nextLine();
+				//scan到的轉成string
+				a = Integer.parseInt(line);
+				switch (a) {
+				case 2:
+					System.out.println("向下");
+					break;
+				case 4:
+					System.out.println("向左");
+					break;
+				case 8:
+					System.out.println("向上");
+					break;
+				case 6:
+					System.out.println("向下");
+					break;
+				case 0:
+					System.out.println("遊戲結束!");
+					break;
+				}
+			}
 			
 			
 		} catch (FileNotFoundException e) {
