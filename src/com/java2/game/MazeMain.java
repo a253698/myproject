@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
@@ -35,11 +36,21 @@ public class MazeMain {
 			
 			Random random = new Random();
 			Set<Integer> set = new HashSet<>();
-			for(int a = 1; a < trapCount; a++) {
+//			for(int a = 1; a < trapCount; a++) {
+//				int b = random.nextInt((row*column) + 1);
+//				set.add(b);
+//			}
+			while(set.size() < trapCount-1){
 				int b = random.nextInt((row*column) + 1);
 				set.add(b);
 			}
+			Iterator it = set.iterator();
 			m.traps = new int[set.size()];
+			for(int n = 0; n < set.size(); n++ ){
+				int i = Integer.parseInt(String.valueOf(it.next()));
+				m.traps[n] = i;
+				System.out.println(m.traps[n]);
+			}
 			
 //			List<Integer> trap = new ArrayList<>();
 //			for(int a = 1; a < trapCount ; a++  ) {
