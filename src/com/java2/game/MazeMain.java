@@ -33,40 +33,41 @@ public class MazeMain {
 			line = in.readLine();
 			int trapCount = Integer.parseInt(tokens[0]);
 			Maze m = new Maze(column, row, trapCount);
-			
+
 			Random random = new Random();
 			Set<Integer> set = new HashSet<>();
-//			for(int a = 1; a < trapCount; a++) {
-//				int b = random.nextInt((row*column) + 1);
-//				set.add(b);
-//			}
-			while(set.size() < trapCount-1){
-				int b = random.nextInt((row*column) + 1);
+			// for(int a = 1; a < trapCount; a++) {
+			// int b = random.nextInt((row*column) + 1);
+			// set.add(b);
+			// }
+			while (set.size() < trapCount - 1) {
+				int b = random.nextInt((row * column) + 1);
 				set.add(b);
 			}
+
+			// from Steve
 			Iterator it = set.iterator();
 			m.traps = new int[set.size()];
-			for(int n = 0; n < set.size(); n++ ){
+			for (int n = 0; n < set.size(); n++) {
 				int i = Integer.parseInt(String.valueOf(it.next()));
 				m.traps[n] = i;
 				System.out.println(m.traps[n]);
 			}
-			
-//			List<Integer> trap = new ArrayList<>();
-//			for(int a = 1; a < trapCount ; a++  ) {
-//				int b = random.nextInt((row*column) + 1);
-//				trap.add(b);
-//			}
-//			m.traps = new int[trap.size()];
-//			不可用List，會重複
-			
-			
+
+			// List<Integer> trap = new ArrayList<>();
+			// for(int a = 1; a < trapCount ; a++ ) {
+			// int b = random.nextInt((row*column) + 1);
+			// trap.add(b);
+			// }
+			// m.traps = new int[trap.size()];
+			// 不可用List，會重複
+
 			/**/
 			// int moves = Integer.parseInt(tokens[0]);
 			// for(int i = 0; i < moves; i++){
 			// }
 			/**/
-			
+
 			Scanner scanner = new Scanner(System.in);
 			int a = -1;
 			while (m.player.hp > 0) {
@@ -78,7 +79,15 @@ public class MazeMain {
 				case 2:
 					if (m.player.postition / column < row - 1) {
 						m.player.postition = m.player.postition + column;
-						m.player.hp = m.player.hp - 1;
+//
+						for (int n = 0; n < set.size(); n++) {
+							if(m.player.postition == m.traps[n]) {
+								m.player.hp = m.player.hp - 20;
+							}else {
+								m.player.hp = m.player.hp - 1;
+							}
+						}
+//
 					} else {
 						m.player.hp = m.player.hp - 5;
 						System.out.println("HIT!!");
@@ -90,7 +99,15 @@ public class MazeMain {
 				case 4:
 					if (m.player.postition % column != 0) {
 						m.player.postition = m.player.postition - 1;
-						m.player.hp = m.player.hp - 1;
+						//
+						for (int n = 0; n < set.size(); n++) {
+							if(m.player.postition == m.traps[n]) {
+								m.player.hp = m.player.hp - 20;
+							}else {
+								m.player.hp = m.player.hp - 1;
+							}
+						}
+//
 					} else {
 						m.player.hp = m.player.hp - 5;
 						System.out.println("HIT!!");
@@ -102,7 +119,15 @@ public class MazeMain {
 				case 8:
 					if (m.player.postition / column == 0) {
 						m.player.postition = m.player.postition - column;
-						m.player.hp = m.player.hp - 1;
+						//
+						for (int n = 0; n < set.size(); n++) {
+							if(m.player.postition == m.traps[n]) {
+								m.player.hp = m.player.hp - 20;
+							}else {
+								m.player.hp = m.player.hp - 1;
+							}
+						}
+//
 					} else {
 						m.player.hp = m.player.hp - 5;
 						System.out.println("HIT!!");
@@ -114,7 +139,15 @@ public class MazeMain {
 				case 6:
 					if (m.player.postition % column != column - 1) {
 						m.player.postition = m.player.postition + 1;
-						m.player.hp = m.player.hp - 1;
+						//
+						for (int n = 0; n < set.size(); n++) {
+							if(m.player.postition == m.traps[n]) {
+								m.player.hp = m.player.hp - 20;
+							}else {
+								m.player.hp = m.player.hp - 1;
+							}
+						}
+//
 					} else {
 						m.player.hp = m.player.hp - 5;
 						System.out.println("HIT!!");
