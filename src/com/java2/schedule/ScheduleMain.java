@@ -1,9 +1,9 @@
 package com.java2.schedule;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
-
-import com.java2.game.MazeMain.Maze;
+import java.io.IOException;
 
 public class ScheduleMain {
 
@@ -19,16 +19,24 @@ public class ScheduleMain {
 	FileReader fr;
 
 	public ScheduleMain() {
-		fr = new FileReader("schedule.txt");
-		BufferedReader in = new BufferedReader(fr);
-		String line = in.readLine();
-		String tokens[] = line.split(",");
-		// String schedule = tokens[0];
-		String classorder = tokens[0];
-		String classname = tokens[1];
-		int day = Integer.parseInt(tokens[2]);
-		int classtime = Integer.parseInt(tokens[3]);
-		int hour = Integer.parseInt(tokens[4]);
+		try {
+			fr = new FileReader("schedule.txt");
+			BufferedReader in = new BufferedReader(fr);
+			String line = in.readLine();
+			String tokens[] = line.split(",");
+			// String schedule = tokens[0];
+			String classorder = tokens[0];
+			String classname = tokens[1];
+			int day = Integer.parseInt(tokens[2]);
+			int classtime = Integer.parseInt(tokens[3]);
+			int hour = Integer.parseInt(tokens[4]);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	class Schedule {
