@@ -155,6 +155,7 @@ public class MazeMain {
 					System.out.println("向右");
 					System.out.println(m.player.hp);
 					break;
+					
 				case 0:
 					System.out.println("遊戲結束!");
 					break;
