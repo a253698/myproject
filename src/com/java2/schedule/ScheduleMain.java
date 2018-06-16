@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class ScheduleMain {
@@ -32,6 +34,13 @@ public class ScheduleMain {
 			int classtime = Integer.parseInt(tokens[3]);
 			int hour = Integer.parseInt(tokens[4]);
 			Schedule s = new Schedule(classorder, classname, day, classtime, hour);
+			
+			List<String> classorder1 =  new ArrayList<>();
+			List<String> classname1 =  new ArrayList<>();
+			List<Integer> day1 =  new ArrayList<>();
+			List<Integer> classtime1 =  new ArrayList<>();
+			List<Integer> hour1 =  new ArrayList<>();
+			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -54,6 +63,46 @@ public class ScheduleMain {
 			this.classname = classname;
 			this.day = day;
 			this.classtime = classtime;
+			this.hour = hour;
+		}
+
+		public String getClassorder() {
+			return classorder;
+		}
+
+		public void setClassorder(String classorder) {
+			this.classorder = classorder;
+		}
+
+		public String getClassname() {
+			return classname;
+		}
+
+		public void setClassname(String classname) {
+			this.classname = classname;
+		}
+
+		public int getDay() {
+			return day;
+		}
+
+		public void setDay(int day) {
+			this.day = day;
+		}
+
+		public int getClasstime() {
+			return classtime;
+		}
+
+		public void setClasstime(int classtime) {
+			this.classtime = classtime;
+		}
+
+		public int getHour() {
+			return hour;
+		}
+
+		public void setHour(int hour) {
 			this.hour = hour;
 		}
 	}
