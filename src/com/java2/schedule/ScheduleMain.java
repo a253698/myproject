@@ -31,7 +31,7 @@ public class ScheduleMain {
 			int day = Integer.parseInt(tokens[2]);
 			int classtime = Integer.parseInt(tokens[3]);
 			int hour = Integer.parseInt(tokens[4]);
-			ScheduleMain s = new ScheduleMain(classorder, classname, day, classtime, hour);
+			Schedule s = new Schedule(classorder, classname, day, classtime, hour);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -41,11 +41,20 @@ public class ScheduleMain {
 		}
 	}
 
+
 	class Schedule {
 		String classorder;
 		String classname;
 		int day;
 		int classtime;
 		int hour;
+		
+		public Schedule(String classorder, String classname, int day, int classtime, int hour) {
+			this.classorder = classorder;
+			this.classname = classname;
+			this.day = day;
+			this.classtime = classtime;
+			this.hour = hour;
+		}
 	}
 }
