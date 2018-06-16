@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+
 public class ScheduleMain {
 
 	/*
@@ -15,7 +16,7 @@ public class ScheduleMain {
 	public static void main(String[] args) {
 		new ScheduleMain();
 	}
-
+  
 	FileReader fr;
 
 	public ScheduleMain() {
@@ -30,6 +31,7 @@ public class ScheduleMain {
 			int day = Integer.parseInt(tokens[2]);
 			int classtime = Integer.parseInt(tokens[3]);
 			int hour = Integer.parseInt(tokens[4]);
+			ScheduleMain s = new ScheduleMain(classorder, classname, day, classtime, hour);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
