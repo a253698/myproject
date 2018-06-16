@@ -5,7 +5,9 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 
 public class ScheduleMain {
@@ -26,23 +28,28 @@ public class ScheduleMain {
 			fr = new FileReader("schedule.txt");
 			BufferedReader in = new BufferedReader(fr);
 			String line = in.readLine();
-			String tokens[] = line.split(",");
-			// String schedule = tokens[0];
-			String classorder = tokens[0];
-			String classname = tokens[1];
-			int day = Integer.parseInt(tokens[2]);
-			int classtime = Integer.parseInt(tokens[3]);
-			int hour = Integer.parseInt(tokens[4]);
-			Schedule s = new Schedule(classorder, classname, day, classtime, hour);
+			String tokens01[] = line.split(",");
 			
-			List<String> classorder1 =  new ArrayList<>();
-			for() {
-				
-			}
-			List<String> classname1 =  new ArrayList<>();
-			List<Integer> day1 =  new ArrayList<>();
-			List<Integer> classtime1 =  new ArrayList<>();
-			List<Integer> hour1 =  new ArrayList<>();
+			Set<String> set = new HashSet<>();
+			for (int i = 0; i < tokens01.length; i++) {
+				class01.add(tokens01[i]);
+				}
+			
+//			// String schedule = tokens[0];
+//			String classorder = tokens[0];
+//			String classname = tokens[1];
+//			int day = Integer.parseInt(tokens[2]);
+//			int classtime = Integer.parseInt(tokens[3]);
+//			int hour = Integer.parseInt(tokens[4]);
+//			Schedule s = new Schedule(classorder, classname, day, classtime, hour);
+			
+//			List<String> classorder1 =  new ArrayList<>();
+//			for() {	
+//			}
+//			List<String> classname1 =  new ArrayList<>();
+//			List<Integer> day1 =  new ArrayList<>();
+//			List<Integer> classtime1 =  new ArrayList<>();
+//			List<Integer> hour1 =  new ArrayList<>();
 			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -53,60 +60,75 @@ public class ScheduleMain {
 		}
 	}
 
-
-	class Schedule {
-		String classorder;
-		String classname;
-		int day;
-		int classtime;
-		int hour;
+	
+	class Schoolclasses{
+		Set<String> class01;
+		Set<String> class02;
+		Set<String> class03;
+		Set<String> class04;
 		
-		public Schedule(String classorder, String classname, int day, int classtime, int hour) {
-			this.classorder = classorder;
-			this.classname = classname;
-			this.day = day;
-			this.classtime = classtime;
-			this.hour = hour;
+		public Schoolclasses(Set<String> class01, Set<String> class02, Set<String> class03, Set<String> class04) {
+			this.class01 = class01;
+			this.class02 = class02;
+			this.class03 = class03;
+			this.class04 = class04;
 		}
+	}
+	
 
-		public String getClassorder() {
-			return classorder;
-		}
+//	class Schedule {
+//		String classorder;
+//		String classname;
+//		int day;
+//		int classtime;
+//		int hour;
+//		
+//		public Schedule(String classorder, String classname, int day, int classtime, int hour) {
+//			this.classorder = classorder;
+//			this.classname = classname;
+//			this.day = day;
+//			this.classtime = classtime;
+//			this.hour = hour;
+//		}
 
-		public void setClassorder(String classorder) {
-			this.classorder = classorder;
-		}
-
-		public String getClassname() {
-			return classname;
-		}
-
-		public void setClassname(String classname) {
-			this.classname = classname;
-		}
-
-		public int getDay() {
-			return day;
-		}
-
-		public void setDay(int day) {
-			this.day = day;
-		}
-
-		public int getClasstime() {
-			return classtime;
-		}
-
-		public void setClasstime(int classtime) {
-			this.classtime = classtime;
-		}
-
-		public int getHour() {
-			return hour;
-		}
-
-		public void setHour(int hour) {
-			this.hour = hour;
-		}
+//		public String getClassorder() {
+//			return classorder;
+//		}
+//
+//		public void setClassorder(String classorder) {
+//			this.classorder = classorder;
+//		}
+//
+//		public String getClassname() {
+//			return classname;
+//		}
+//
+//		public void setClassname(String classname) {
+//			this.classname = classname;
+//		}
+//
+//		public int getDay() {
+//			return day;
+//		}
+//
+//		public void setDay(int day) {
+//			this.day = day;
+//		}
+//
+//		public int getClasstime() {
+//			return classtime;
+//		}
+//
+//		public void setClasstime(int classtime) {
+//			this.classtime = classtime;
+//		}
+//
+//		public int getHour() {
+//			return hour;
+//		}
+//
+//		public void setHour(int hour) {
+//			this.hour = hour;
+//		}
 	}
 }
