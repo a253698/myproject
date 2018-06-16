@@ -36,6 +36,9 @@ public class ScheduleMain {
 			Schedule s = new Schedule(classorder, classname, day, classtime, hour);
 			
 			List<String> classorder1 =  new ArrayList<>();
+			for() {
+				
+			}
 			List<String> classname1 =  new ArrayList<>();
 			List<Integer> day1 =  new ArrayList<>();
 			List<Integer> classtime1 =  new ArrayList<>();
