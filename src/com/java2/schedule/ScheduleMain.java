@@ -64,17 +64,36 @@ public class ScheduleMain {
 				int sTime = Integer.parseInt(scanner02);
 				switch (sWeek) {
 				case 1:
-					if (sTime >= Integer.parseInt(class01.get(3))
-							&& sTime <= Integer.parseInt(class01.get(3) + class01.get(4))) {
-						System.out.println("[有課]" + "\t" + "Class:" + class01.get(0) + "\t" + "Name:" + class01.get(1));
+					if (sTime >= Integer.parseInt(class03.get(3))
+							&& sTime <= Integer.parseInt(class03.get(3) + class03.get(4))) {
+						System.out.println("[有課]" + "  " + "Class:" + class03.get(0) + "  " + "Name:" + class03.get(1));
 					} else {
 						System.out.println("[沒課]");
 					}
 				case 2:
+					if (sTime >= Integer.parseInt(class01.get(3))
+							&& sTime <= Integer.parseInt(class01.get(3) + class01.get(4))) {
+						System.out.println("[有課]" + "  " + "Class:" + class01.get(0) + "  " + "Name:" + class01.get(1));
+					} else {
+						System.out.println("[沒課]");
+					}
 
 				case 3:
 
 				case 4:
+
+					if (sTime >= Integer.parseInt(class02.get(3))
+							&& sTime <= Integer.parseInt(class02.get(3) + class02.get(4))) {
+						System.out.println("[有課]" + "  " + "Class:" + class02.get(0) + "  " + "Name:" + class03.get(1));
+					} else {
+						if (sTime >= Integer.parseInt(class04.get(3))
+								&& sTime <= Integer.parseInt(class04.get(3) + class04.get(4))) {
+							System.out.println(
+									"[有課]" + "  " + "Class:" + class04.get(0) + "  " + "Name:" + class04.get(1));
+						} else {
+							System.out.println("[沒課]");
+						}
+					}
 
 				case 5:
 
@@ -85,14 +104,6 @@ public class ScheduleMain {
 				}
 
 			}
-
-			// System.out.println("請輸入星期:");
-			// Scanner scannerWeek = new Scanner(System.in);
-			// String sweek = scannerWeek.nextLine();
-			//
-			// System.out.println("請輸入時間");
-			// Scanner scannerTime = new Scanner(System.in);
-			// String stime = scannerTime.nextLine();
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
