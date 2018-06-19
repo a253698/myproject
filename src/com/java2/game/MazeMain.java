@@ -17,13 +17,9 @@ import com.java2.oo.Drink;
 public class MazeMain {
 
 	FileReader fr;
-	// int hp = 100;
-	// int pos = 0;
-
+	
 	public MazeMain() {
-
 		try {
-
 			fr = new FileReader("Maze.txt");
 			BufferedReader in = new BufferedReader(fr);
 			String line = in.readLine();
@@ -36,37 +32,19 @@ public class MazeMain {
 
 			Random random = new Random();
 			Set<Integer> set = new HashSet<>();
-			// for(int a = 1; a < trapCount; a++) {
-			// int b = random.nextInt((row*column) + 1);
-			// set.add(b);
-			// }
 			while (set.size() < trapCount - 1) {
 				int b = random.nextInt((row * column) + 1);
 				set.add(b);
 			}
 
-			// from Steve
+			// from Steven9587
 			Iterator it = set.iterator();
 			m.traps = new int[set.size()];
 			for (int n = 0; n < set.size(); n++) {
 				int i = Integer.parseInt(String.valueOf(it.next()));
 				m.traps[n] = i;
-				System.out.println(m.traps[n]);
+				System.out.println("trap" + (n+1) + ":" + m.traps[n]);
 			}
-
-			// List<Integer> trap = new ArrayList<>();
-			// for(int a = 1; a < trapCount ; a++ ) {
-			// int b = random.nextInt((row*column) + 1);
-			// trap.add(b);
-			// }
-			// m.traps = new int[trap.size()];
-			// 不可用List，會重複
-
-			/**/
-			// int moves = Integer.parseInt(tokens[0]);
-			// for(int i = 0; i < moves; i++){
-			// }
-			/**/
 
 			Scanner scanner = new Scanner(System.in);
 			int a = -1;
@@ -179,7 +157,7 @@ public class MazeMain {
 		int row, column;
 		int trapCount;
 		int[] traps;
-		Player player;
+		Player player = new Player();
 
 		public Maze(int column, int row, int trapCount) {
 			this.column = column;
