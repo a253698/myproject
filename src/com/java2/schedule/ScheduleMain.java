@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Scanner;
 import java.util.Set;
 
 public class ScheduleMain {
@@ -21,13 +22,13 @@ public class ScheduleMain {
 		try {
 			fr = new FileReader("schedule.txt");
 			BufferedReader in = new BufferedReader(fr);
+			
 			String line = in.readLine();
 			String tokens01[] = line.split(",");
 			List<String> class01 = new ArrayList<>();
 			for (int i = 0; i < tokens01.length; i++) {
 				class01.add(tokens01[i]);
 			}
-			
 			
 			line = in.readLine();
 			String tokens02[] = line.split(",");
@@ -50,6 +51,14 @@ public class ScheduleMain {
 				class01.add(tokens01[i]);
 			}
 			
+			System.out.println("請輸入星期:");
+			Scanner scannerWeek = new Scanner(System.in);
+			String sweek = scannerWeek.nextLine();
+			
+			System.out.println("請輸入時間");
+			Scanner scannerTime = new Scanner(System.in);
+			String stime = scannerTime.nextLine();
+
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
