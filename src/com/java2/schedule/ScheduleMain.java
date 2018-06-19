@@ -13,8 +13,7 @@ import java.util.Set;
 public class ScheduleMain {
 
 	public static void main(String[] args) {
-		ScheduleMain sm = new ScheduleMain();
-		sm.start();
+		new ScheduleMain();
 	}
 
 	FileReader fr;
@@ -64,30 +63,27 @@ public class ScheduleMain {
 				int sTime = Integer.parseInt(scanner02);
 				switch (sWeek) {
 				case 1:
-					if (sTime >= Integer.parseInt(class03.get(3))
-							&& sTime <= Integer.parseInt(class03.get(3) + class03.get(4))) {
+					if (sTime >= Integer.parseInt(class03.get(3)) && sTime <= (Integer.parseInt(class03.get(3))+Integer.parseInt(class03.get(4)))) {
 						System.out.println("[有課]" + "  " + "Class:" + class03.get(0) + "  " + "Name:" + class03.get(1));
 					} else {
 						System.out.println("[沒課]");
 					}
 				case 2:
-					if (sTime >= Integer.parseInt(class01.get(3))
-							&& sTime <= Integer.parseInt(class01.get(3) + class01.get(4))) {
+					if (sTime >= Integer.parseInt(class01.get(3)) && sTime <= (Integer.parseInt(class01.get(3))+Integer.parseInt(class01.get(4)))) {
 						System.out.println("[有課]" + "  " + "Class:" + class01.get(0) + "  " + "Name:" + class01.get(1));
 					} else {
 						System.out.println("[沒課]");
 					}
 
 				case 3:
+					System.out.println("[沒課]");
 
 				case 4:
 
-					if (sTime >= Integer.parseInt(class02.get(3))
-							&& sTime <= Integer.parseInt(class02.get(3) + class02.get(4))) {
-						System.out.println("[有課]" + "  " + "Class:" + class02.get(0) + "  " + "Name:" + class03.get(1));
+					if (sTime >= Integer.parseInt(class02.get(3)) && sTime <= (Integer.parseInt(class02.get(3))+Integer.parseInt(class02.get(4)))) {
+						System.out.println("[有課]" + "  " + "Class:" + class02.get(0) + "  " + "Name:" + class02.get(1));
 					} else {
-						if (sTime >= Integer.parseInt(class04.get(3))
-								&& sTime <= Integer.parseInt(class04.get(3) + class04.get(4))) {
+						if (sTime >= Integer.parseInt(class04.get(3)) && sTime <= (Integer.parseInt(class04.get(3))+Integer.parseInt(class04.get(4)))) {
 							System.out.println(
 									"[有課]" + "  " + "Class:" + class04.get(0) + "  " + "Name:" + class04.get(1));
 						} else {
@@ -96,10 +92,13 @@ public class ScheduleMain {
 					}
 
 				case 5:
+					System.out.println("[沒課]");
 
 				case 6:
+					System.out.println("[沒課]");
 
 				case 7:
+					System.out.println("[沒課]");
 
 				}
 
