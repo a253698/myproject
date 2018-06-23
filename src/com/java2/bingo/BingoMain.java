@@ -26,12 +26,14 @@ public class BingoMain {
 			int chartrow = (int) Math.sqrt(bingochart);
 			line = in.readLine();
 			String tokens[] = line.split(",");
-			List<Integer> ans = new ArrayList<>();
-//			for (int i = 1; i <= tokens.length; i++) {
-//				int j = Integer.parseInt(tokens[i]);
-//				ans.add(j);
-//			}
-			BingoChart bc = new BingoChart(bingochart, chartrow, ans);
+			List<Integer> ans = new ArrayList<Integer>();
+			for (int i = 0; i <= tokens.length - 1; i++) {
+				int a = Integer.parseInt(tokens[i]);
+				ans.add(a);
+			}
+			
+			
+			BingoChart bc = new BingoChart(bingochart, chartrow, ans, tokens);
 			bc.PrintChart();
 			
 		} catch (FileNotFoundException e) {

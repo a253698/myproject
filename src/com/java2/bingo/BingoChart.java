@@ -9,11 +9,13 @@ public class BingoChart {
 	int bingochart;
 	int chartrow;
 	List<Integer> ans;
+	String[] tokens;
 
-	public BingoChart(int bingochart, int chartrow, List<Integer> ans) {
+	public BingoChart(int bingochart, int chartrow, List<Integer> ans, String[] tokens) {
 		this.bingochart = bingochart;
 		this.chartrow = chartrow;
 		this.ans = ans;
+		this.tokens = tokens;
 	}
 
 	public void PrintChart() {
@@ -25,20 +27,54 @@ public class BingoChart {
 		Collections.shuffle(bingo);
 
 		System.out.println(bingo);
+		System.out.println(ans);
+		System.out.println(" ");
 
-		for (int m = 1; m <= bingochart; m++) {
-			for (int k = 1; k <= 10; k++) {
-				if (bingo.get(m) == ans.get(k)) {
-					bingo.set(k, 0);
-				}
-			}
-			System.out.print(bingo.get(m) + "\t");
-			if (m % chartrow == 0) {
+		// from anna
+		for (int i = 0; i < bingochart; i++) {
+			System.out.print(bingo.get(i) + "	");
+			if (i % chartrow == 4) {
 				System.out.println();
 			}
-
 		}
 
+		System.out.println(" ");
+		
+		// for (int i = 1; i <= bingochart; i++) {
+		// System.out.print(bingo.get(i) + "\t");
+		// if (i % chartrow == 0) {
+		// System.out.println();
+		// }
+		// }
+		
+//		System.out.println(tokens.length);
+//		System.out.println(" ");
+
+		for (int e = 0; e < bingochart; e++) {
+			for (int r = 0; r < tokens.length; r++) {
+				if(bingo.get(e).equals(tokens[r]))
+				bingo.set(e, 0);
+			}
+		}
+		
+		System.out.println(" ");
+		
+		for (int i = 0; i < bingochart; i++) {
+			System.out.print(bingo.get(i) + "	");
+			if (i % chartrow == 4) {
+				System.out.println();
+			}
+		}
+	}
+	
+	
+
+	public String[] getTokens() {
+		return tokens;
+	}
+
+	public void setTokens(String[] tokens) {
+		this.tokens = tokens;
 	}
 
 	public int getBingochart() {
