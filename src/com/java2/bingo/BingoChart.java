@@ -40,20 +40,12 @@ public class BingoChart {
 
 		System.out.println(" ");
 		
-		// for (int i = 1; i <= bingochart; i++) {
-		// System.out.print(bingo.get(i) + "\t");
-		// if (i % chartrow == 0) {
-		// System.out.println();
-		// }
-		// }
-		
-//		System.out.println(tokens.length);
-//		System.out.println(" ");
-
+	
 		for (int e = 0; e < bingochart; e++) {
 			for (int r = 0; r < tokens.length; r++) {
-				if(bingo.get(e).equals(tokens[r]))
-				bingo.set(e, 0);
+				if(bingo.get(e) == ans.get(r)) {
+					bingo.set(bingo.get(e), 0);
+				}
 			}
 		}
 		
@@ -66,8 +58,6 @@ public class BingoChart {
 			}
 		}
 	}
-	
-	
 
 	public String[] getTokens() {
 		return tokens;
