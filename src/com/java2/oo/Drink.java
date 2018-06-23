@@ -7,8 +7,8 @@ public class Drink {
 	int price;
 	
 	public Drink(){
-		
 	}
+	
 	public Drink(int id, String name, int price){
 		super();
 		this.id = id;
