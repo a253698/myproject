@@ -23,15 +23,16 @@ public class Main {
 		System.out.println("please type in day :");
 		int askday = scanner.nextInt();
 		System.out.println("please type in hour :");
-		int askstarttime = scanner.nextInt();
+		int asktime = scanner.nextInt();
 		boolean ok = true;
-		for (Classes cla : cl) {
-			if (!cla.isOk(askday, askstarttime)) {
-				System.out.println("有課  邊號:" + cla.getClassNo() + " 課名:" + cla.ClassName);
+		for (Classes classes : cl) {
+			if (!classes.isOk(askday, asktime)) {
+				System.out.println("有課  邊號:" + classes.getClassNo() + " 課名:" + classes.ClassName);
 				ok = false;
 				break;
 			}
-		}if(ok) {
+		}
+		if (ok) {
 			System.out.println("沒課");
 		}
 	}
@@ -41,7 +42,7 @@ public class Main {
 			fr = new FileReader("schedule.txt");
 			BufferedReader in = new BufferedReader(fr);
 			String line = in.readLine();
-			for (int a = 0; a == 4; a++) {
+			while (line != null) {
 				String tokens[] = line.split(",");
 				String ClassNo = tokens[0];
 				String ClassName = tokens[1];
@@ -71,7 +72,7 @@ public class Main {
 
 	public void reply() {
 		// if (askday == day) {
-		// if (askstarttime >= starttime && askstarttime <= (starttime + time)) {
+		// if (asktime >= starttime && askstarttime <= (starttime + time)) {
 		// System.out.println("有課" + );
 		// }else {
 		// System.out.println("沒課");

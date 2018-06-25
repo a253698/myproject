@@ -16,10 +16,10 @@ public class Classes {
 			this.starttime = starttime;
 		}
 		
-		public boolean isOk(int askday,int askstarttime) {
+		public boolean isOk(int askday,int asktime) {
 			boolean ok = true;
 			if(askday == this.day) {
-			if (askstarttime >= this.starttime && askstarttime <= (this.starttime + this.time)) {}
+			if (asktime >= this.starttime && asktime <= (this.starttime + this.time))
 				return false;
 			}
 			return ok;
