@@ -16,7 +16,14 @@ public class Classes {
 			this.starttime = starttime;
 		}
 		
-		
+		public boolean isOk(int askday,int askstarttime) {
+			boolean ok = true;
+			if(askday == this.day) {
+				if(askstarttime >= this.starttime && askstarttime <= (this.starttime + this.time)) {}
+				return false;
+			}
+			return ok;
+		}
 		
 		public String getClassName() {
 			return ClassName;
