@@ -18,6 +18,11 @@ public class Main {
 	}
 	
 	public Main() {
+		
+		
+	}
+	
+	public void readFile() {
 		try {
 			fr = new FileReader("schedule.txt");
 			BufferedReader in = new BufferedReader(fr);
@@ -40,7 +45,6 @@ public class Main {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 		} 
-		
 	}
 	
 	public void ask() {
