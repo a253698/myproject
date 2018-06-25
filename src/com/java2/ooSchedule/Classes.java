@@ -19,7 +19,7 @@ public class Classes {
 		public boolean isOk(int askday,int askstarttime) {
 			boolean ok = true;
 			if(askday == this.day) {
-				if(askstarttime >= this.starttime && askstarttime <= (this.starttime + this.time)) {}
+			if (askstarttime >= this.starttime && askstarttime <= (this.starttime + this.time)) {}
 				return false;
 			}
 			return ok;
