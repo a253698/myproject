@@ -36,6 +36,8 @@ public class Snow extends Thread {
 			int movement = random.nextInt(3) - 1;
 			x = x - movement;
 			snowCanvas.repaint();
+//			重畫，閃逤
+			
 
 			try {
 				sleep(50);

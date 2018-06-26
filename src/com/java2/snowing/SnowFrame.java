@@ -17,6 +17,7 @@ public class SnowFrame extends JFrame {
 		add(canvas);
 		// canvas.repaint();
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		//關掉就結束
 	}
 
 	public class SnowCanvas extends Canvas {
@@ -36,7 +37,7 @@ public class SnowFrame extends JFrame {
 			// 定位
 			for (int i = 0; i < 100; i++) {
 				Snow snow = snows.get(i);
-				g.drawString("$", snow.x, snow.y);
+				g.drawString("*", snow.x, snow.y);
 
 			}
 		}
