@@ -4,14 +4,16 @@ package com.java2.snowing;
 import java.awt.Canvas;
 import java.util.Random;
 
+import com.java2.snowing.SnowFrame.SnowCanvas;
+
 public class Snow extends Thread {
 	Random random = new Random();
 	int x;
 	int y = 800;
-	private Canvas canvas;
+	private SnowCanvas snowCanvas;
 
-	public Snow(Canvas canvas) {
-		this.canvas = canvas;
+	public Snow(SnowCanvas snowCanvas) {
+		this.snowCanvas = snowCanvas;
 		x = random.nextInt(800);
 		y = random.nextInt(600);
 	}
@@ -28,24 +30,22 @@ public class Snow extends Thread {
 	@Override
 	public void run() {
 		for (int i = 0; i < 800; i++) {
-//			System.out.println(getName() + ":(" + x + "," + y + ")");
-//			y = y - 1;
+			// System.out.println(getName() + ":(" + x + "," + y + ")");
+			// y = y - 1;
 			y = y + 1;
 			int movement = random.nextInt(3) - 1;
 			x = x - movement;
-			
-			canvas.repaint();
-			
+			snowCanvas.repaint();
+
 			try {
 				sleep(50);
-				//慢0.05秒
-				canvas.repaint();
+				// 慢0.05秒
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			
-//			System.out.print(new String(new char[x]).replaceAll("\0", " "));
-//			System.out.println("*");}
+
+			// System.out.print(new String(new char[x]).replaceAll("\0", " "));
+			// System.out.println("*");}
+		}
 	}
-}
 }
